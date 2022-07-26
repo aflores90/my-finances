@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  vue:
+    build: .
+    container_name: finances
+    volumes:
+      - ./:/usr/src
+      - /usr/src/node_modules
+    ports:
+      - '4000:4000'
+    command: npm run dev
